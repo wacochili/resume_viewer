@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'bootstrap-sass', '~> 3.3.5'
+gem 'unirest'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use SCSS for stylesheets
