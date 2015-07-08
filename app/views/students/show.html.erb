@@ -4,6 +4,7 @@
       <h2><%= @student.first_name %> <%= @student.last_name %></h2>
       <h4><%= @student.email %></h4>
       <h4><%= @student.phone_number %></h4>
+      <p>Skills: <%= @student.skills %></p>
       <p><%= @student.short_bio %></p>
 
       <div class="col-sm-6">
@@ -30,9 +31,20 @@
           </ul>
           <!-- Tab panes -->
           <div class="tab-content">
-            <div role="tabpanel" class="tab-pane active" id="experience">...</div>
-            <div role="tabpanel" class="tab-pane" id="education">...</div>
-            <div role="tabpanel" class="tab-pane" id="capstone">...</div>
+            <div role="tabpanel" class="tab-pane active" id="experience">
+              <p><%= @student.experiences %></p>
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="education">
+              <% @student.educations_degrees.each do |degree| %>
+                <p>Degree: <%= degree %></p>
+              <% end %>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="capstone">
+              <p>
+                
+              </p>
+            </div>
           </div>
         </div><!--end tabular_info-->
 
